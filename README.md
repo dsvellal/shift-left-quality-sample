@@ -27,5 +27,5 @@ git checkout hello-world-feature-branch
 3. Run the project
 
 ```
-sh ./shift-left-quality-checks.sh
+mvn clean install
 ```
