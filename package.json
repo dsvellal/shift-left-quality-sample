@@ -8,7 +8,7 @@
     "url": "git+https://github.com/dsvellal/shift-left-quality-example.git"
   },
   "scripts": {
-    "test": "./checks.sh",
+    "test": "./shift-left-quality-checks.sh",
     "watch": "npm-watch test"
   },
   "author": "dsvellal",
