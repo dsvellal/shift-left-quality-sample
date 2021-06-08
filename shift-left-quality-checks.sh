@@ -15,4 +15,3 @@ run_check md markdownlint-cli -c ./config/markdownlintcli_config.json
 run_check md markdown-spellcheck --en-us --ignore-numbers --ignore-acronyms --report
 run_check md write-good --no-tooWordy
 
-mvn clean install

@@ -1,0 +1,9 @@
+name: Maven quality checks
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - run: mvn clean install
+
