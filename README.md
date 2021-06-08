@@ -1,39 +1,37 @@
 # Welcome to shift left quality discussion
 
-In this branch, I am committing a slightly complex hello world example, with a lot of checks in pom.xml.
+This is a hello world example, with a lot of checks in [configuration file](./pom.xml).
 
-The intent of this branch is to understand how/what are some checks that can be done at desk.
+The intent of this branch is to understand how/what are some checks done at desk.
 
-It is very important that we highlight some of the features like spelling mistake & lint issues.
+We highlight some of the features like spelling mistake & lint issues here.
 
-# How to run this project?
+## Prerequisite
 
-### Prerequisite
-
-This project requires Java 11 and Maven. 
+This project requires Java 11 and Maven.
 
 Please download & install java 11 from [here](https://www.oracle.com/in/java/technologies/javase-jdk11-downloads.html)
 
 Please download & install Maven 3.8 from [here](https://maven.apache.org/download.cgi)
 
+Please download & install NodeJS LTS 14.17.0 FROM [here](https://nodejs.org/en/download/)
 
-### To run the project, follow these steps:
+## To run the project, follow these steps
 
-1. Clone the repository using command
-
+Clone the repository using command
 
 ```sh
 git clone git@github.com:dsvellal/shift-left-quality-sample.git
 ```
 
-2. Change to hello-world-feature-branch
+Change to hello-world-feature-branch
 
 ```sh
 git checkout quality-at-desk
 ```
 
-3. Run the project
+Run the project checks locally
 
 ```sh
-mvn clean install
+sh ./shift-left-quality-checks.sh
 ```
