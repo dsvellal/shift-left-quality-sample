@@ -1,8 +1,8 @@
 # Welcome to shift left quality discussion
 
-This is a hello world example, with a lot of checks in [configuration file](./pom.xml).
+This is a hello world example, with a lot of checks in [configuration file](./pom.xml), as well as in the [shell script](./shift-left-quality-checks.sh)
 
-The intent of this branch is to understand how/what are some checks done at desk.
+The intent of this branch is to understand how non business logic related necessary checks can be automated and done at desk even before raising a pull request.
 
 We highlight some of the features like spelling mistake & lint issues here.
 
