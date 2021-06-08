@@ -8,6 +8,7 @@ run_check() {
      files=$(find . -name "*.${ext}" -not -path "./node_modules/*")
      echo "${files}" | xargs npx "${@}"
 }
+run_check yml yaml-lint
 run_check json jsonlint
 run_check sh shellcheck -e SC1017
 run_check md markdownlint-cli -c ./config/markdownlintcli_config.json
