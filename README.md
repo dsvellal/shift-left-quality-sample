@@ -1,10 +1,6 @@
 # Welcome to Shift-left-quality discussion
 
-In this branch, I am committing a simple hello-world example in java.
-
-The intent of this branch is to understand how/what are some of the common reveiw cooments that I would be given.
-
-It is very important that we highlight some of the features like speling mistake & linting issues.
+This branch is a simple implementation of greet function. Also notice the number of comments provided by a reviewer in the [pull-request](https://github.com/dsvellal/shift-left-quality-sample/pull/1). In these pull-request comments, identify what comments add value to the code-base and what comments are not adding any value to the logic of the code, however incurs the same cost to fix the issues. In [quality-at-desk branch](https://github.com/dsvellal/shift-left-quality-sample/tree/quality-at-desk) we address some such non-productive comments by automating those checks.
 
 ### How to run this project?
 
@@ -31,5 +27,5 @@ git checkout hello-world-feature-branch
 3. Run the project
 
 ```
-mvn clean test
+sh ./shift-left-quality-checks.sh
 ```
