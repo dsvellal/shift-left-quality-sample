@@ -1,10 +1,6 @@
 # Welcome to shift left quality discussion
 
-This is a hello world example, with a lot of checks in [configuration file](./pom.xml).
-
-The intent of this branch is to understand how/what are some checks done at desk.
-
-We highlight some of the features like spelling mistake & lint issues here.
+This is a hello world example, where parallel pipline checks are made using github actions.
 
 ## Prerequisite
 
@@ -27,7 +23,7 @@ git clone git@github.com:dsvellal/shift-left-quality-sample.git
 Change to hello-world-feature-branch
 
 ```sh
-git checkout quality-at-desk
+git checkout pipeline-consistency-parallel-checks
 ```
 
 Run the project checks locally
