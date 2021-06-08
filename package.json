@@ -1,0 +1,19 @@
+{
+  "name": "Shift left quality example",
+  "version": "1.0.0",
+  "description": "Shift left quality example",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsvellal/shift-left-quality-example.git"
+  },
+  "scripts": {
+    "test": "./shift-left-quality-checks.sh",
+    "watch": "npm-watch test"
+  },
+  "author": "dsvellal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dsvellal/shift-left-quality-example/issues"
+  }
+}
