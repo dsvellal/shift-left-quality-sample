@@ -1,6 +1,6 @@
 # Welcome to shift left quality discussion
 
-This is a hello world example, where parallel pipline checks are made using github actions.
+This is a hello world example, where parallel pipeline checks invokes multiple github actions.
 
 ## Prerequisite
 
