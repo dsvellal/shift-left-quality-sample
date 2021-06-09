@@ -14,8 +14,11 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+    cd $HOME
+    wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.35.0/pmd-bin-6.35.0.zip
+    unzip pmd-bin-6.35.0.zip
+    alias pmd="$HOME/pmd-bin-6.35.0/bin/run.sh pmd"
+    pmd -d /usr/src -R rulesets/java/quickstart.xml -f text
   displayName: 'Run a multi-line script'
 
 - task: Maven@3
