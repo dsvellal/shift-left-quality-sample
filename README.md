@@ -1,17 +1,31 @@
-# Shift left quality sample
+# Welcome to Shift-left-quality discussion
 
-This is a simple hello-world example. 
-In this, different branches demonstrate different types of checks.
+This branch is a simple implementation of greet function. Also notice the number of comments provided by a reviewer in the [pull-request](https://github.com/dsvellal/shift-left-quality-sample/pull/1). In these pull-request comments, identify what comments add value to the code-base and what comments are not adding any value to the logic of the code, however incurs the same cost to fix the issues. In [quality-at-desk branch](https://github.com/dsvellal/shift-left-quality-sample/tree/quality-at-desk) we address some such non-productive comments by automating those checks.
 
-Please refer the following branches for the checks:
+### How to run this project?
 
-1. [hello-world-feature-branch](https://github.com/dsvellal/shift-left-quality-sample/tree/hello-world-feature-branch) for simple implementation of greet function. Also notice the amount of pull-request comments present in this code [here](https://github.com/dsvellal/shift-left-quality-sample/pull/1)
-2. [quality-at-desk](https://github.com/dsvellal/shift-left-quality-sample/tree/quality-at-desk) branch incorporates all the comments that the user has given, plus, it also ensures that there is a local script [shift-left-quality-checks.sh](https://github.com/dsvellal/shift-left-quality-sample/blob/quality-at-desk/shift-left-quality-checks.sh), which when run locally, on developer desk, will give the same feedback with respect to the comments provided by the reviewer. The intention here is to remove as many non-essential comments as possible, and add automated checks in our configurations so that the reviewer does not have to worry too much about these, and can focus only on necessary business-logic checks during the review. Special files to notice is [pom.xml](https://github.com/dsvellal/shift-left-quality-sample/blob/quality-at-desk/pom.xml) and [shift-left-quality-checks.sh](https://github.com/dsvellal/shift-left-quality-sample/blob/quality-at-desk/shift-left-quality-checks.sh). Also notice the [pull-request](https://github.com/dsvellal/shift-left-quality-sample/pull/2/files) that gives you files changed from the previous implementation of hello-world-feature-branch.
-3. [pipeline-consistency](https://github.com/dsvellal/shift-left-quality-sample/tree/pipeline-consistency) branch incorporates all the shift-left-quality-checks that were done at developer desktop into a github provide pipeline, using github actions. Notice that since we are running the same shift-left-quality-checks.sh file both locally and in the [pipeline configuration](https://github.com/dsvellal/shift-left-quality-sample/blob/pipeline-consistency/.github/workflows/shift-left-quality-checks.yml), the feedback will remain consistent to the programmer. The reason why we add this to the pipeline is to ensure that if the programmer misses running the checks locally, any violations missed will be caught in the pipeline. This will ensure that the programmer can then look at the logs and execute the checks locally, recreate them, fix them, validate them and then push the changes to the remote repository. Also notice the [pull-request](https://github.com/dsvellal/shift-left-quality-sample/pull/3/files) that gives you files changed from the previous implementation of quality-at-desk.
-4. [pipeline-consistency-parallel-checks](https://github.com/dsvellal/shift-left-quality-sample/tree/pipeline-consistency-parallel-checks) branch incorporates parall execution of checks. In this branch, on any commit, or pull-request, three checks are executed in parallel.
+##### Pre-requisite
+This project requires Java 11 and Maven. 
 
-* Maven checks which are part of the pom.xml
-* Spelling checks, grammar checks, linting checks which are part of shift-left-quality-checks.sh
-* Superlinter checks - to support linting of any newly added file type (like docker-files etc.) which are currently not supported by the shift-left-quality-checks.sh or pom.xml. This is a catch-all check. The intent is if any failures are noticed here, the programmer picks it up from the logs and adds them to either shift-left-quality-checks.sh or to pom.xml with appropriate configurations.
+Please download & install java 11 from: https://www.oracle.com/in/java/technologies/javase-jdk11-downloads.html
 
-The parallel execution is done leveraging github actions, and can be seen [here in github/workflows](https://github.com/dsvellal/shift-left-quality-sample/tree/pipeline-consistency-parallel-checks/.github/workflows). Each yml file has one action defined, and upon either a commit, or a pull-request to the code, these three checks are run in parallel and feedback is provided to the developer. Also notice the [pull-request](https://github.com/dsvellal/shift-left-quality-sample/pull/4/files) that gives you files changed from the previous implementation of pipeline-consistency.
+Please download & install Maven 3.8 from: https://maven.apache.org/download.cgi
+
+
+##### To run the project, follow these steps:
+1. Clone the repository using command
+
+```
+git clone git@github.com:dsvellal/shift-left-quality-sample.git
+```
+2. Change to hello-world-feature-branch
+
+```
+git checkout hello-world-feature-branch
+```
+
+3. Run the project
+
+```
+mvn clean install
+```
